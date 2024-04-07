@@ -25,7 +25,7 @@ const Nav = ({ containerStyles }: { containerStyles: string }) => {
                   smooth
                   spy
                   activeClass='active'
-                  className='cursor-pointer hover:text-accent transition-all'
+                  className='cursor-pointer hover:text-accent transition-all duration-300'
                >
                   {link.name}
                </ScrollLink>

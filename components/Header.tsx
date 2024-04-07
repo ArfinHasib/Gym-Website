@@ -5,9 +5,11 @@ import MobileNav from './MobileNav';
 import Nav from './Nav';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { MdMenu } from 'react-icons/md';
 
 const Header = () => {
    const [headerActive, setHeaderActive] = useState(false);
+   const [openNav, setOpenNav] = useState(false);
 
    useEffect(() => {
       const handleScroll = () => {
@@ -42,10 +44,32 @@ const Header = () => {
             <MobileNav
                containerStyles={`${
                   headerActive ? 'top-[90px]' : 'top-[124px]'
+               } ${
+                  openNav
+                     ? 'max-h-max pt-8 pb-10 border-t border-white/10'
+                     : 'max-h-0 pt-0 pb-0 overflow-hidden border-white/0'
                } flex flex-col text-center gap-8 fixed bg-primary-200 w-full left-0 text-base uppercase font-medium text-white transition-all xl:hidden`}
             />
             {/* desktop nav - hidden on small devices */}
-            <Nav containerStyles='py-12 flex gap-4 hidden xl:flex text-white' />
+            <Nav containerStyles='py-12 flex gap-4 hidden xl:flex text-white text-base uppercase font-medium transition-all' />
+            {/* Hide/Open menu btn */}
+            <div className='flex items-center gap-4'>
+               {/* login and register buttons */}
+               <div className='text-white flex items-center gap-4'>
+                  <button className='hover:text-accent transition-all uppercase text-base font-medium'>
+                     login
+                  </button>
+                  <button className='hover:text-accent transition-all uppercase text-base font-medium'>
+                     register
+                  </button>
+               </div>
+               <button
+                  onClick={() => setOpenNav(!openNav)}
+                  className='text-white xl:hidden'
+               >
+                  <MdMenu className='text-4xl' />
+               </button>
+            </div>
          </div>
       </header>
    );
