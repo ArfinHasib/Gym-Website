@@ -25,13 +25,15 @@ const config: Config = {
       },
 
       extend: {
-         primary: {
-            DEFAULT: '#333',
-            100: '#484848',
-            200: '#151515',
-            300: '#111',
+         colors: {
+            primary: {
+               DEFAULT: '#333',
+               100: '#484848',
+               200: '#151515',
+               300: '#111',
+            },
+            accent: '#d4000d',
          },
-         accent: '#d4000d',
       },
    },
    plugins: [],
