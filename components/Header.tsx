@@ -38,6 +38,7 @@ const Header = () => {
                   width={187}
                   height={55}
                   alt=''
+                  className='w-[120px] lg:w-[187px]'
                />
             </Link>
             {/* Mobile Nav - hidden on large devices */}
