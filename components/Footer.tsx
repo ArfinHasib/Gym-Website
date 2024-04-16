@@ -62,14 +62,16 @@ const Footer = () => {
                   <Link href='#'>
                      <Image
                         src={'/assets/img/logo.png'}
-                        width={117}
+                        width={187}
                         height={55}
                         alt=''
+                        className='mb-4'
                      />
                   </Link>
-                  <p className='max-w-sm'>
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                     Reprehenderit, sapiente.
+                  <p className='max-w-sm mb-6'>
+                     Hard work spotlights the character of people: some turn up
+                     their sleeves, some turn up their noses, and some don&amp;t
+                     turn up at all
                   </p>
                   <ul className='flex flex-col gap-4'>
                      <li className='flex items-center gap-4'>
@@ -89,7 +91,10 @@ const Footer = () => {
                   </ul>
                </motion.div>
                {/* blog */}
-               <motion.div variants={footerItem} className=''>
+               <motion.div
+                  variants={footerItem}
+                  className='flex flex-col gap-8'
+               >
                   <h4 className='h4 text-accent'>Recent Blog posts</h4>
                   {/* posts */}
                   <div className='border-b border-dotted border-gray-400 flex flex-col gap-3 pb-3 mb-4s'>
@@ -112,7 +117,7 @@ const Footer = () => {
                         className='hover:text-accent transition-all'
                      >
                         <h5 className='h5 leading-snug'>
-                           How to stay motivated for all exercises
+                           Eat, Sleep, Train with us and repeat!
                         </h5>
                         <p className='text-gray-400 text-[12px] tracking-[3px] uppercase'>
                            May 22, 2024
@@ -126,7 +131,7 @@ const Footer = () => {
                         className='hover:text-accent transition-all'
                      >
                         <h5 className='h5 leading-snug'>
-                           How to stay motivated for all exercises
+                           Stay motivated all the times. Secrets revealed
                         </h5>
                         <p className='text-gray-400 text-[12px] tracking-[3px] uppercase'>
                            May 22, 2024
@@ -173,31 +178,7 @@ const Footer = () => {
                      </Link>
                      <Link href='#'>
                         <Image
-                           src={'/assets/img/trainers/david.jpg'}
-                           width={100}
-                           height={100}
-                           alt=''
-                        />
-                     </Link>
-                     <Link href='#'>
-                        <Image
-                           src={'/assets/img/trainers/matt.jpg'}
-                           width={100}
-                           height={100}
-                           alt=''
-                        />
-                     </Link>
-                     <Link href='#'>
-                        <Image
-                           src={'/assets/img/trainers/rosy.jpg'}
-                           width={100}
-                           height={100}
-                           alt=''
-                        />
-                     </Link>
-                     <Link href='#'>
-                        <Image
-                           src={'/assets/img/trainers/sofia.jpg'}
+                           src={'/assets/img/classes/fitness.jpg'}
                            width={100}
                            height={100}
                            alt=''
@@ -210,8 +191,9 @@ const Footer = () => {
                   <h4 className='h4 text-accent mb-4'>Newsletter</h4>
                   <div className='flex flex-col gap-4'>
                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Nemo possimus sed aut corrupti repellat sequi!
+                        Sign up to our weekly newsletter where you will receive
+                        fitness tips and tricks, usefull articlea and guided
+                        training tutorials
                      </p>
                      <form>
                         <input
@@ -235,7 +217,7 @@ const Footer = () => {
             <div className='container mx-auto h-full'>
                <div className='flex flex-col md:flex-row items-center justify-between h-full'>
                   <span>
-                     &copy; Copyright 2024 FitPhysique. All rights reserved
+                     &copy; Copyright 2024 Gym Borcelle. All rights reserved
                   </span>
                   <ul className='mt-5 md:mb-0 flex gap-4 text-xl'>
                      <li>

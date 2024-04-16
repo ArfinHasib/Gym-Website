@@ -144,20 +144,20 @@ const MembershipSlider = () => {
          {membershipData.map((item, index) => {
             return (
                <SwiperSlide key={index}>
-                  <div className='border border-accent hover:bg-primary-300/80 transition-all duration-300 w-full max-w-sm xl:max-w-none mx-auto'>
+                  <div className='border border-accent hover:bg-accent/20 hover:text-white transition-all duration-300 w-full max-w-sm xl:max-w-none mx-auto'>
                      <div className='py-5 px-[60px] border-b border-accent'>
                         <h4 className='h4'>{item.title}</h4>
                      </div>
                      {/* benefits */}
-                     <div className='py-[30px] px-[60px]'>
-                        <ul className='flex flex-col gap-5 mb-7'>
+                     <div className='py-[30px] px-[60px] hover:text-white'>
+                        <ul className='flex flex-col gap-5 mb-7 '>
                            {item.benefits.map((item, index) => {
                               return (
                                  <li
                                     key={index}
-                                    className='flex items-center gap-2'
+                                    className='flex items-center gap-2 '
                                  >
-                                    <item.icon className='text-accent text-lg' />
+                                    <item.icon className='text-accent hover:text-white text-lg' />
                                     {item.text}
                                  </li>
                               );
@@ -171,7 +171,7 @@ const MembershipSlider = () => {
                            <em className='self-end text-2xl'>/month</em>
                         </p>
                         <CustomButton
-                           containerStyles='w-[196px] h-[62px]'
+                           containerStyles='w-[196px] h-[62px] hover:text-black'
                            text='Buy Now'
                         />
                      </div>

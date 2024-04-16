@@ -30,19 +30,19 @@ const blogData = [
    {
       img: '/assets/img/blog/post2.jpg',
       date: 'March 10, 2024',
-      title: 'Maintain a perfect structure after workout',
+      title: 'Diet Benefits and How to eat properly',
       href: '',
    },
    {
       img: '/assets/img/blog/post3.jpg',
       date: 'March 10, 2024',
-      title: 'Maintain a perfect structure after workout',
+      title: 'Loss weight, Increase Stamina with intense Cardio',
       href: '',
    },
    {
       img: '/assets/img/blog/post4.jpg',
       date: 'March 10, 2024',
-      title: 'Maintain a perfect structure after workout',
+      title: 'Proper and perfect way to increase Arms size',
       href: '',
    },
 
@@ -67,24 +67,33 @@ const blogData = [
    {
       img: '/assets/img/blog/post4.jpg',
       date: 'March 10, 2024',
-      title: 'Maintain a perfect structure after workout',
+      title: 'Kettle Bell Workouts That you should do',
       href: '',
    },
 ];
 
 const Blog = () => {
    return (
-      <section className='bg-primary-300 text-white py-24' id='blog'>
+      <section className='bg-primary-300 text-white py-16' id='blog'>
          <div className='container mx-auto'>
             <motion.h2
                variants={fadeIn('up', 0.4)}
                initial='hidden'
                whileInView={'show'}
                viewport={{ once: false, amount: 0.2 }}
-               className='h2 text-center mb-8'
+               className='h2 text-center mb-4'
             >
                Blogs
             </motion.h2>
+            <motion.p
+               variants={fadeIn('up', 0.6)}
+               initial='hidden'
+               whileInView={'show'}
+               viewport={{ once: false, amount: 0.2 }}
+               className='text-center text-[16px] lg:text-[20px] mb-8'
+            >
+               Read latest articles from our blogs that will help you much.
+            </motion.p>
             <motion.div
                variants={fadeIn('up', 0.6)}
                initial='hidden'

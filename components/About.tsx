@@ -25,7 +25,7 @@ const featured = [
       icon: <FaDumbbell />,
       title: 'modern equipment',
       subtitle:
-         'We have got the best and latest machines and equipments that you need to get the perfect body you need. All the instruments are easy to follow and our trainers will guide you through on how to use them.',
+         'We have got the best and latest machines and equipments that you need to get the perfect body you need. All the instruments are easy to follow.',
    },
 ];
 
@@ -48,7 +48,7 @@ const About = () => {
                   initial='hidden'
                   whileInView={'show'}
                   viewport={{ once: false, amount: 0.2 }}
-                  className='max-w-[600px] mx-auto text-center mb-5'
+                  className='max-w-[600px] mx-auto text-center mb-5 text-[20px]'
                >
                   We are the best of the best. Our trainers and machines &
                   instruments are world class. You can get the best price with
@@ -65,17 +65,17 @@ const About = () => {
                   {featured.map((feature, index) => {
                      return (
                         <div
-                           className='flex flex-col justify-center items-center gap-4 border p-10 shadow-2xl'
+                           className=' bg-accent flex flex-col justify-center items-center gap-8 border p-16 shadow-2xl'
                            key={index}
                         >
                            <div className='text-4xl bg-primary-300 text-white w-[80px] h-[80px] rounded-full flex justify-center items-center'>
                               {feature.icon}
                            </div>
                            <div className='flex flex-col justify-center items-center gap-2 text-center'>
-                              <h4 className='h4 text-accent'>
-                                 {feature.title}
-                              </h4>
-                              <p>{feature.subtitle}</p>
+                              <h4 className='h4 text-white'>{feature.title}</h4>
+                              <p className='text-white/80'>
+                                 {feature.subtitle}
+                              </p>
                            </div>
                         </div>
                      );

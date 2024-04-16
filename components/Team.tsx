@@ -25,7 +25,7 @@ const trainerData = [
    {
       image: '/assets/img/trainers/matt.jpg',
       name: 'Matt Adams',
-      role: 'Body building coach',
+      role: 'Crossfit Trainer',
       description:
          'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, eum.',
 
@@ -38,7 +38,7 @@ const trainerData = [
    {
       image: '/assets/img/trainers/rosy.jpg',
       name: 'Rosy Rivers',
-      role: 'Body building coach',
+      role: 'Yoga Instructor',
       description:
          'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, eum.',
 
@@ -51,7 +51,7 @@ const trainerData = [
    {
       image: '/assets/img/trainers/sofia.jpg',
       name: 'Sofia Lauren',
-      role: 'Body building coach',
+      role: 'Cardio Expert',
       description:
          'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, eum.',
 
@@ -76,6 +76,16 @@ const Team = () => {
             >
                Our trainers
             </motion.h2>
+            <motion.p
+               variants={fadeIn('up', 0.6)}
+               initial='hidden'
+               whileInView={'show'}
+               viewport={{ once: false, amount: 0.2 }}
+               className='text-center text-[20px] mb-8'
+            >
+               Our trainers are best in the business and will guide you
+               thoroughly
+            </motion.p>
             {/* trainers grid */}
             <motion.div
                variants={fadeIn('up', 0.6)}
@@ -97,15 +107,15 @@ const Team = () => {
                         {/* name */}
                         <h4 className='h4 mb-2'>{trainer.name}</h4>
                         {/* role */}
-                        <p className='uppercase text-xs tracking-[3px] mb-2'>
+                        <p className='uppercase text-xs tracking-[3px] mb-4'>
                            {trainer.role}
                         </p>
                         {/* description */}
-                        <p className='mb-6 max-w-[320px] mx-auto'>
+                        {/* <p className='mb-6 max-w-[320px] mx-auto'>
                            {trainer.description}
-                        </p>
+                        </p> */}
                         {/* socials */}
-                        <div className='flex gap-8 justify-center'>
+                        <div className='flex gap-4 justify-center'>
                            {trainer.social.map((social, index) => {
                               return (
                                  <div key={index}>
